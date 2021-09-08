@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>
+            lightning__AppPage
+        </target>
+        <target>
+            lightning__RecordPage
+        </target>
+        <target>
+            lightning__HomePage
+        </target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
+            <property name="objectName" label="Object" type="String" description="Salesforce Object Api name."/>
+            <property name="searchField" label="Search And Primary Field" default="Name" type="String" description="Salesforce Field Api name. This Field used to search record and primary field to display on list"/>
+            <property name="otherFieldsToDisplay" label="Other Fields to display"  type="String" description="Salesforce Field Api name comma (,) seperated. These Field used to display on list as secondary fields."/>
+            <property name="fieldLabel" label="Field Label" type="String" />
+            <property name="placeholder" label="Placeholder" type="String" />
+            <property name="labelPosition" label="Label Position" type="String" datasource="Top,Left"/>
+            <property name="iconName" label="SLDS Icon" type="String" description="SLDS icon name or leave blank."/>
+             <property name="required" label="Required" type="Boolean" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
